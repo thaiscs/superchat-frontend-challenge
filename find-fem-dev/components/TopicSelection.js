@@ -1,4 +1,4 @@
-export function TopicSelection({ topics, topicSelection, topicSelected }) {
+const TopicSelection = ({ topics, topicSelection, topicSelected }) => {
   return (
     <label className="p-2 mt-2">
       <span className="p-1">Github topics</span>
@@ -12,4 +12,6 @@ export function TopicSelection({ topics, topicSelection, topicSelected }) {
       </select>
     </label>
   );
-}
+};
+
+export default TopicSelection;

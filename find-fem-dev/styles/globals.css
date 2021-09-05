@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .app {
   text-align: center;
 }
@@ -11,7 +15,6 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  /* color: white; */
 }
 
 textarea {
@@ -23,7 +26,4 @@ select,
 textarea {
   border-radius: 4px;
   border-color: unset;
-}
-div.invitation-textarea {
-  margin: 10px;
 }
