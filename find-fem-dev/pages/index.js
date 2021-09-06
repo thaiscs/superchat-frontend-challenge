@@ -5,8 +5,9 @@ import ColorSelection from "../components/ColorSelection";
 import Image from "next/image";
 import githubicon from "../public/assets/github.svg";
 import heartplus from "../public/assets/heartplus.png";
+import ShareableLink from "../components/ShareableLink";
 
-function App() {
+const App = () => {
   const [username, setUsername] = useState("");
   const [reponame, setReponame] = useState("");
   const [invitationText, setInvitationText] = useState("");
@@ -44,7 +45,6 @@ function App() {
     });
   };
 
-  // onSubmit={handleSubmit}
   return (
     <div className="app">
       <div className="app-header">
@@ -59,7 +59,9 @@ function App() {
                   className="p-1"
                   type="text"
                   placeholder="username"
-                  onChange={(e) => setUsername(e.target.value)}
+                  onChange={(e) => {
+                    setUsername(e.target.value);
+                  }}
                 />
               </div>
               <div className="p-1">
@@ -107,15 +109,19 @@ function App() {
                 reponame={reponame}
                 invitationText={invitationText}
                 topicSelected={topicSelected}
-                colorSelected={colorSelected}
                 currentColor={currentColor}
               />
             </div>
+            <ShareableLink
+              username={username}
+              reponame={reponame}
+              topic={topicSelected}
+            />
           </div>
         </form>
       </div>
     </div>
   );
-}
+};
 
 export default App;
