@@ -1,6 +1,6 @@
 import Link from "next/link";
 const ShareableLink = ({ username, reponame, topic }) => {
-  const baseURL = "www.find-female-devs.io/";
+  const baseURL = "https://find-female-devs-puce.vercel.app/";
 
   return (
     <div className="mt-6">
@@ -14,10 +14,7 @@ const ShareableLink = ({ username, reponame, topic }) => {
           },
         }}
       >
-        <a>
-          {baseURL}
-          {username}
-        </a>
+        <a>{`${baseURL}githubrepo?username=${username}&reponame=${reponame}&topic=${topic}`}</a>
       </Link>
     </div>
   );
