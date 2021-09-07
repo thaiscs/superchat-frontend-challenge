@@ -1,6 +1,6 @@
 import Link from "next/link";
 const ShareableLink = ({ username, reponame, topic }) => {
-  const baseURL = "wwww.find-female-devs.io/";
+  const baseURL = "www.find-female-devs.io/";
 
   return (
     <div className="mt-6">
