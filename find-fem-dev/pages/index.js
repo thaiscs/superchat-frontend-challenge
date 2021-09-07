@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "../styles/Index.module.css";
 import CardPreview from "../components/CardPreview";
 import TopicSelection from "../components/TopicSelection";
 import ColorSelection from "../components/ColorSelection";
@@ -46,8 +47,8 @@ const App = () => {
   };
 
   return (
-    <div className="app">
-      <div className="app-header">
+    <div className={styles.app}>
+      <div className={styles.appContent}>
         <form>
           <div className="flex flex-wrap justify-center">
             <div className="flex items-center">
@@ -56,7 +57,7 @@ const App = () => {
               </div>
               <div className="p-1">
                 <input
-                  className="p-1"
+                  className={`${styles.inputBorder} p-1`}
                   type="text"
                   placeholder="username"
                   onChange={(e) => {
@@ -66,7 +67,7 @@ const App = () => {
               </div>
               <div className="p-1">
                 <input
-                  className="p-1"
+                  className={`${styles.inputBorder} p-1`}
                   type="text"
                   placeholder="reponame"
                   onChange={(e) => setReponame(e.target.value)}
@@ -96,7 +97,10 @@ const App = () => {
                   </div>
                   <div className="p-1">
                     <textarea
-                      className="p-3 mt-2"
+                      className={`${[
+                        styles.textareaResize,
+                        styles.inputBorder,
+                      ].join(" ")} p-3 mt-2`}
                       type="text"
                       placeholder="invitation to contribute"
                       onChange={(e) => setInvitationText(e.target.value)}
@@ -112,12 +116,12 @@ const App = () => {
                 currentColor={currentColor}
               />
             </div>
-            <ShareableLink
-              username={username}
-              reponame={reponame}
-              topic={topicSelected}
-            />
           </div>
+          <ShareableLink
+            username={username}
+            reponame={reponame}
+            topic={topicSelected}
+          />
         </form>
       </div>
     </div>

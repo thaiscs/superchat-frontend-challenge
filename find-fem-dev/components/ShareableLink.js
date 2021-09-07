@@ -3,7 +3,7 @@ const ShareableLink = ({ username, reponame, topic }) => {
   const baseURL = "wwww.find-female-devs.io/";
 
   return (
-    <div>
+    <div className="mt-6">
       <Link
         href={{
           pathname: "/githubrepo/",

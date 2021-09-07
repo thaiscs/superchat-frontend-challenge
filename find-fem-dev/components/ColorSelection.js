@@ -3,7 +3,7 @@ const ColorSelection = ({ colors, colorSelection, colorSelected }) => {
     <label className="p-2 mt-2 justify-between">
       <span className="p-1">Poster color</span>
       <select
-        className="p-1 w-225 ml-3"
+        className="rounded p-1 w-225 ml-3"
         value={colorSelected}
         onChange={colorSelection}
       >

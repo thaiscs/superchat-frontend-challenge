@@ -1,0 +1,23 @@
+.app {
+  text-align: center;
+}
+
+.appContent {
+  background-color: darkorange;
+  min-height: 100vh;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.textareaResize {
+  resize: none;
+}
+
+.inputBorder {
+  border-radius: 4px;
+  border-color: unset;
+}
